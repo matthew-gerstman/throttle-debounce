@@ -1,18 +1,13 @@
 export function throttle(func: Function, timeout: number) {
   let ready: boolean = true;
-  let timer: NodeJS.Timeout | null;
   return (...args: any) => {
-    if (ready) {
-      ready = false;
-      return func(...args);
-    }
-
-    if (timer) {
+    if (!ready) {
       return;
     }
 
-    timer = setTimeout(() => {
-      timer = null;
+    ready = false;
+    func(...args);
+    setTimeout(() => {
       ready = true;
     }, timeout);
   };
