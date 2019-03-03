@@ -22,13 +22,3 @@ export function debounce(func: Function, timeout: number) {
     }, timeout);
   };
 }
-
-const debouncedLog = debounce(console.log, 5);
-const throttledLog = throttle(console.log, 5);
-
-for (let time = 0; time < 100; time += 10) {
-  setTimeout(() => {
-    throttledLog('throttle: muggle');
-    debouncedLog('debounce: wizard');
-  }, time);
-}

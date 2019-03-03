@@ -1,9 +1,15 @@
 .spells-wrapper {
   padding: 20px;
   text-align: center;
+  color: #1982c4;
+  font-weight: bold;
 }
 
 button {
-  margin: 5px;
-  margin-top: 20px;
+  margin: 20px 5px 0 5px;
+  background-color: #1982c4;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 5px;
 }
